@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    font-style: normal;
+}
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    position: relative;
+}
+.mobile {
+    display: none;
+}
+
+li {
+    list-style-type: none;
+}
+.promo {
+    background-color: #EEEFF1;
+    padding: 30px 0 145px;
+    height: 100vh;
+}
+
+.promo .promo__container {
+    max-width: 1113px;
+    display: flex;
+    justify-content:space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.promo .promo__menu {
+    background-color: #E5E9F0;
+    padding: 33px 45px;
+    max-width: 700px;
+}
+
+.promo .promo__menu ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo .promo__menu li {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0 10px;
+    width: max-content;    
+}
+
+.promo_info {
+    display: flex;
+    margin-top: 130px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promo__text h4 {
+    margin-top: 60px;
+    max-width: 540px;
+    color: #727272;
+    line-height: 26px;
+    font-weight: normal;
+}
+.promo__text .writeMe {
+    margin-top: 60px;
+    filter: drop-shadow(-6px 5px 0px rgba(52, 84, 122, 0.2));
+    background: #34547A;
+    padding: 25px 41px;
+    color: #FFFFFF;
+}
+
+.iconQr {
+    position: absolute;
+    right: 0;
+    top: -18px;
+}
+
+.iconBinaryKey {
+    position: absolute;
+    left: 0;
+    bottom: -41px;
+}
+
+.promo__laptop {
+    margin-left: 122px;
+}
+
+.about{
+    padding: 119px 0 78px 0;
+}
+
+.about .about_container {
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about .about_container h2 {
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.divider {
+    background: #E5E9F0;
+    width: 80px;
+    height: 7px;
+    margin: 8px auto 27px;
+}
+
+.about .about_container h4 {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 164.06%;
+}
+
+.projects {
+    background: #34547A;
+    padding: 100px ;
+}
+
+.projects .projects__container {
+    display: flex;
+    justify-content: space-between;  
+}
+
+.projects .projects__container .item {
+    display: flex;
+}
+
+.projects .projects__container .item_txt span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.projects .projects__container .item_txt {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-left: 20px;
+}
+
+.skills {
+    padding: 100px 0;
+    
+}
+
+.skills__container .slash {
+    position: absolute;
+    left: 400px;
+}
+
+.skills__container .java_icon {
+    position: absolute;
+    top: 450px;
+}
+
+.skills_wraper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.skills__container .photo {
+    width: 555px;
+    height: 450px;
+    box-shadow: 9px 9px 130px rgba(52, 84, 122, 0.5);
+}
+
+.skills_item .divider {
+    margin: 10px 0 0 0;
+}
+
+.skills .skills__slider {
+    margin-top: 34px;
+}
+
+.skills .skills__slider .slider_item {
+    margin-bottom: 30px;
+}
+
+.skills .skills__slider .slider_item .slider_text {
+    margin-bottom: 20px;
+    color: #727272;
+}
+
+.gray_line {
+    min-width: 325px;
+    height: 4px;
+    width: 100%;
+    background: #C4C4C4;
+}
+
+.gray_line .blue_line {
+    width: 50%;
+    height: 100%;
+    background: #34547A;
+}
+
+.work {
+    padding: 100px 0;
+    background: #EEEFF1; 
+    text-align: center;
+    align-items: center;
+}
+
+.work h2 {
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+}
+
+.work .divider {
+    width: 269px;
+    background: rgba(52, 84, 122, 0.3);
+    margin: 0 auto 35px;
+}
+
+.work h4 {
+    width: 540px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #727272;
+    margin: 0 auto;
+    margin-bottom: 57px;
+    font-weight: normal;
+}
+
+.work video {
+    width: 1110px;
+    height: 600px;
+}
+
+.cards {
+    padding-top: 35px;
+}
+
+.cards .cards_container .tasks {
+    width: 25%;
+    height: 25%;  
+}
+
+.cards .cards_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.microsoft {
+    padding: 85px 0;
+}
+
+.microsoft .microsoft_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+@media (max-width: 769px) {
+    .desktop{
+        display: none;
+    }
+}
