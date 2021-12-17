@@ -8,6 +8,7 @@ h1
 	font-size: 50px 
 	font-weight: bold 
 	width: 100% 
+
 .container 
 	max-width: 1150px 
 	margin: 0 auto 
@@ -19,7 +20,6 @@ li
 .promo 
 	background-color: #EEEFF1 
 	padding: 30px 0 145px 
-	height: 100vh 
 	.promo__container 
 		max-width: 1113px 
 		display: flex 
@@ -30,6 +30,15 @@ li
 		background-color: #E5E9F0 
 		padding: 33px 45px 
 		max-width: 700px 
+		.hmb
+			width: 40px
+			span
+				display: block
+				height: 5px
+				background-color: #34547A
+				&:nth-child(2)
+					margin: 5px 0
+					
 		ul 
 			display: flex 
 			justify-content: space-between 
@@ -41,34 +50,44 @@ li
 			text-transform: uppercase 
 			margin: 0 10px 
 			width: max-content 
+			cursor: pointer 
+			&:hover 
+				color: #34547A 
 .promo_info 
 	display: flex 
 	margin-top: 130px 
 	justify-content: space-between 
 	align-items: center 
-.promo__text 
+	h1 
+		font-size: 45px 
+.promo__text  
 	h4 
 		margin-top: 60px 
 		max-width: 540px 
 		color: #727272 
 		line-height: 26px 
 		font-weight: normal 
-	.writeMe 
-		margin-top: 60px 
-		filter: drop-shadow(-6px 5px 0px rgba(52, 84, 122, 0.2)) 
-		background: #34547A 
-		padding: 25px 41px 
-		color: #FFFFFF 
+.writeMe 
+	margin-top: 60px 
+	filter: drop-shadow(-6px 5px 0px rgba(52, 84, 122, 0.2)) 
+	background: #34547A  
+	color: #FFFFFF 
+	width: 255px
+	height: 65px
+	&:hover 
+		cursor: pointer 
 .iconQr 
 	position: absolute 
 	right: 0 
-	top: -18px 
+	top: -50px 
 .iconBinaryKey 
 	position: absolute 
 	left: 0 
-	bottom: -41px 
+	bottom: -100px 
 .promo__laptop 
 	margin-left: 122px 
+	margin-left: 0 
+	display: flex 
 .about 
 	padding: 119px 0 78px 0 
 	.about_container 
@@ -91,10 +110,16 @@ li
 	background: #34547A 
 	padding: 100px 
 	.projects__container 
-		display: flex 
-		justify-content: space-between 
+		display: grid
+		grid-template: 1fr/ repeat(6, 1fr)
 		.item 
 			display: flex 
+			margin: 0 6px
+			justify-content: center
+			img
+				height: 100%
+				width: 100%
+
 		.item_txt 
 			font-style: normal 
 			font-weight: normal 
@@ -109,9 +134,10 @@ li
 				line-height: 25px 
 				color: #FFFFFF 
 .skills 
-	padding: 100px 0 
+	padding: 100px 10px 
 	.skills__slider 
 		margin-top: 34px 
+		min-width: 270px
 		.slider_item 
 			margin-bottom: 30px 
 			.slider_text 
@@ -123,11 +149,12 @@ li
 		left: 400px 
 	.java_icon 
 		position: absolute 
-		top: 450px 
+		top: 450px  
 	.photo 
-		width: 555px 
-		height: 450px 
-		box-shadow: 9px 9px 130px rgba(52, 84, 122, 0.5) 
+		width: 100% 
+		height: 100% 
+		box-shadow: 9px 9px 130px rgba(52, 84, 122, 0.5)
+		object-fit: cover 
 .skills_wraper 
 	display: flex 
 	justify-content: space-between 
@@ -135,15 +162,26 @@ li
 .skills_item 
 	.divider 
 		margin: 10px 0 0 0 
-.gray_line 
-	min-width: 325px 
+.h
+	.blue_line 
+		width: 89% 
+		height: 100% 
+		background: #34547A
+.c
+	.blue_line
+		width: 69%
+		height: 100%
+		background: #34547A
+.j
+	.blue_line
+		width: 15%
+		height: 100%
+		background: #34547A
+.gray_line  
 	height: 4px 
 	width: 100% 
 	background: #C4C4C4 
-	.blue_line 
-		width: 50% 
-		height: 100% 
-		background: #34547A 
+	 
 .work 
 	padding: 100px 0 
 	background: #EEEFF1 
@@ -158,7 +196,6 @@ li
 		background: rgba(52, 84, 122, 0.3) 
 		margin: 0 auto 35px 
 	h4 
-		width: 540px 
 		font-size: 16px 
 		line-height: 26px 
 		text-align: center 
@@ -167,45 +204,399 @@ li
 		margin-bottom: 57px 
 		font-weight: normal 
 	video 
-		width: 1110px 
-		height: 600px 
+		width: 95%
+   		 height: 95%
 .cards 
-	padding-top: 35px 
 	.cards_container 
+		display: grid 
+		grid-template-columns: 1fr 1fr 1fr 1fr 
+		width: 100% 
+		gap: 5px 
+		padding: 5px 
+		background: rgba(52, 84, 122, 0.4) 
+		.cards_item 
+			cursor: pointer 
+			position: relative 
+			.cards_blur 
+				transition: 0.3s 
+			img 
+				width: 100% 
+				height: 100% 
+				object-fit: cover 
+			&:hover 
+				.cards_blur 
+					position: absolute 
+					width: 100% 
+					height: 100% 
+					background: rgba(52, 84, 122, 0.8) 
+				&:after 
+					content: '' 
+					display: block 
+					width: 100px 
+					height: 59px 
+					position: absolute 
+					left: 50% 
+					top: 50% 
+					transform: translate(-50%, -50%) 
+					background: url("../assets/icons/eyeProject.svg") center center / cover 
+.microsoft 
+	padding: 85px 0
+	.microsoft_container
+		display: flex
+		justify-content: center 
+	.microsoft_slider
+		max-width: 610px
+		margin: 0 auto
+		.dots
+			display: flex
+			flex-direction: row
+			justify-content: center
+			list-style: none
+			button
+				outline: none
+				border: none
+				border-radius: 100%
+				width: 20px
+				height: 20px
+				&:first-child
+					margin-right: 15px
+		.dots
+			li
+				button
+					font-size: 0 
+			li[class="slick-active"] 
+				button 
+					background-color: #34547A
+					transition: 0.2s all
+					transform: scale(1.1)
+.feedback 
+	background-color: #EEEFF1 
+	padding: 100px 0 
+	.shield5 
+		position: absolute 
+		right: 100px  
+	.shield3 
+		position: absolute 
+		bottom: -10px 
+		left: -140px 
+		left: 0px 
+	.feedback_text 
+		text-align: center 
+		h2 
+			font-style: normal 
+			font-weight: 600 
+			font-size: 32px 
+		h4 
+			margin: 35px auto 
+			font-style: normal 
+			font-weight: normal 
+			font-size: 16px 
+			line-height: 26px 
+			color: #727272 
+			text-align: center
+		.divider 
+			background: rgba(52, 84, 122, 0.3) 
+			width: 320px 
+	.inputs 
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+		max-width: 540px
+		flex-wrap: wrap
+		input 
+			width: 250px 
+			height: 50px 
+			border: none 
+			font-family: Roboto 
+			font-style: normal 
+			font-weight: normal 
+			font-size: 14px 
+			padding-left: 20px  
+	textarea 
+		display: block 
+		width: 47% 
+		min-width: 255px
+		height: 175px 
+		border: none 
+		margin: 20px auto 50px auto 
+		resize: none 
+		padding: 20px 
+		font-family: Roboto 
+		font-style: normal 
+		font-weight: normal 
+		font-size: 14px 
+	.btn 
+		display: block 
+		filter: drop-shadow(-6px 5px 0px rgba(52, 84, 122, 0.1)) 
+		width: 190px 
+		height: 55px 
+		font-style: normal 
+		font-weight: normal 
+		font-size: 14px 
+		line-height: 23px 
+		text-align: center 
+		color: #FFF 
+		background: #34547A 
+		text-transform: uppercase 
+		margin: 0 auto 
+		&:hover 
+			cursor: pointer 
+footer 
+	background: #34547A 
+	padding: 50px 0 50px 
+	.container_footer 
 		display: flex 
 		justify-content: space-between 
-		width: 100% 
-		flex-wrap: wrap 
-		.cards_item1
-			width: 25%
-			height: 400px 
-			background-image: url('../assets/images/Rectangle 7.png') 
-			background-size: 100% 100%
-			&:hover
-				background-image: url('../assets/images/Component 2.png')
-				background-size: 100% 100%
-		.cards_item2
-			width: 25%
-			height: 400px
-			background-image: url('../assets/images/Rectangle 7.7.png')
-			background-size: 100% 100%
-			&:hover
-				background-image: url('../assets/images/Component 1.png') 
-				background-size: 100% 100%
+		align-items: center 
+		h2 
+			font-style: normal 
+			font-weight: 500 
+			font-size: 21px 
+			color: #FFFFFF 
+		h6 
+			font-style: normal 
+			font-weight: normal 
+			font-size: 13px 
+			color: #FFFFFF 
+@media (max-width: 1441px)
+	.container
+		max-width: 862px
+	.promo_info
+		h1
+			font-size: 35px
+	.promo__laptop
+		margin-left: 0
+		display: flex
+	.promo__text
+		text-align: center
+	.projects
+		.container
+			max-width: 1150px
+	.skills__container
+		.slash
+			left: 190px
+		.java_icon
+			top: 325px
+	.work
+		video
+			width: 95%
+   			height: 95%
+			
+	.feedback
+		.shield3
+			left: -140px
+
+@media (max-width: 1025px)
+	.feedback
+		.shield3
+			left: 0px
+	.projects
+		.projects__container
+			grid-template: 1fr 1fr/ repeat(3, 1fr)
+			gap: 20px
 
 
+@media (max-width: 1158px)
+	.microsoft
+		.microsoft_img
+			&:first-child
+				display: none
+				
+
+@media (max-width: 769px) 
+	.desktop
+		display: none 
+	.mobile
+		display: block
+	.promo
+		padding: 0 0 145px
+		.promo_info
+			flex-direction: column
+			margin-top: 80px
+		.promo__menu
+			width: 100%
+			max-width: 768px
+			height: 80px
+			display: flex
+			justify-content: space-around
+			li
+				font-size: 13px
+	.promo__laptop
+		order: 1
+		margin-top: 60px
+		img
+			width: 100%
+			height: 165px
+	.promo__text
+		order: 0
+		text-align: start
+	.writeMe
+		width: 255px
+		height: 65px
+		margin: 0
+	.projects
+		padding: 80px
+	.microsoft	
+		.container
+			.microsoft_container 
+				display: none
+	.cards
+		.cards_container
+			grid-template-columns: 1fr 1fr
+	.skills__container 
+	.work		
+		video
+			width: 95%
+   			height: 95%
+	.feedback
+		.shield3
+			left: 47px
+			bottom: 14px
+			width: 47px
+		.shield5
+			display: none
+			width: 47px
+			top: 150px
+	footer
+		padding: 50px 115px
+
+@media ( max-width: 601px)
+	.promo
+		.promo__menu
+			justify-content: space-between
+			ul
+				display: none
+	.projects
+		.projects__container
+			grid-template: repeat(6, 1fr)/ 1fr
+	.feedback
+		.inputs
+			flex-direction: column
+			align-items: center
+			input
+				&:first-child
+					margin-bottom: 20px
+
+@media ( max-width: 426px)
+	.promo
+		.promo__menu
+			justify-content: space-between
+			padding: 28px 20px
+			ul
+				display: none
+		.promo__text
+			text-align: center
+			h1
+				font-weight: 600
+				font-size: 24px
+			h4
+				font-size: 14px
+				margin-top: 40px
+				margin: 0 50px
+		.promo_info
+			.promo__laptop
+				display: flex
+				flex-direction: column
+				button
+					order: 1
+					margin-top: 50px
+	.about
+		h2
+			font-weight: 600
+			font-size: 24px
+		h4
+			font-size: 14px
+			margin: 0 30px
+	.projects
+		.item
+
+	.skills
+		.slash
+			top: 379px
+			left: 23px
+		.skills_wraper
+			flex-direction: column
+			.skills_item
+				margin: 0 24px
+				.photo
+					width: 75%
+					height: 100%
+					margin: 24px 0 0 94px
+			h2
+				text-align: center
+				font-weight: 600
+				font-size: 24px
+			.divider
+				margin: 10px auto
+	.work
+		padding: 45px 0 70px
+		h2
+			font-weight: 600
+			font-size: 24px
+			margin-top: 45px
+		.divider
+			width: 80px
+			height: 4px
+		h4
+			font-size: 14px
+			line-height: 23px
+			margin: 35px 30px
+	.cards
+		.cards_container
+			grid-template-columns: 1fr
+	.feedback
+		.feedback_container
+			h2
+				font-size: 24px
+			.divider
+				display: none
+			h4
+				font-size: 14px
+				line-height: 23px
+				margin: 25px 75px 40px
+		.inputs
+			margin-top: 0px	
+			input 
+				&:first-child 
+					margin-bottom: 20px
+		textarea
+			width: 255px
+			height: 165px
+		.shield5
+			top: 183px
+	footer
+		.container_footer
+			flex-direction: column
+			.footer_item
+				text-align: center
+				h2
+					margin-bottom: 20px
+				a
+					&:nth-child(2)
+						margin: 0 22px
+				&:first-child
+					margin-bottom: 20px
+@media ( max-width: 376px)
+	.feedback
+		.shield5
+			top: 208px
+			right: 10px
+    		
+		.shield3
+			left: 15px
+	footer
+		padding: 50px 0	
+@media ( max-width: 321px)
+	.skills
+		.skills_wraper
+			.skills_item
+				
+	.feedback
+		.shield5
+
+			
 				
 
 
-.microsoft 
-	padding: 85px 0 
-	.microsoft_container 
-		display: flex 
-		justify-content: space-between 
-/** @media 
-	(max-width 
-		&: 
-			769px) 
-				.desktop{
-        display: none 
- **/
+	
+
